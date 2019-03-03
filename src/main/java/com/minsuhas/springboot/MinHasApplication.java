@@ -1,13 +1,13 @@
-package com.example.demo;
+package com.minsuhas.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MinhasApplication {
+public class MinHasApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MinhasApplication.class, args);
+		SpringApplication.run(MinHasApplication.class, args);
 	}
 
 }
