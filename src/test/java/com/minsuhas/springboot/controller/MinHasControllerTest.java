@@ -27,7 +27,7 @@ public class MinHasControllerTest {
     }
 
     @Test
-    public void testNameChange() throws Exception {
+    public void testChangeName() throws Exception {
         mockMvc.perform(get("/hello/minsu"))
                 .andDo(print())
                 .andExpect(status().isOk())

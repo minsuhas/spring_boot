@@ -15,7 +15,7 @@ public class MinHasController {
     }
 
     @RequestMapping(value = "/hello/{name}", method = {RequestMethod.GET, RequestMethod.POST})
-    public String nameChange(Model model, @PathVariable String name) {
+    public String changeName(Model model, @PathVariable String name) {
         model.addAttribute("returnName", name);
         return "mission2";
     }
