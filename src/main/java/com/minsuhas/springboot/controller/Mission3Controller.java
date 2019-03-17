@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class mission3Controller {
+public class Mission3Controller {
 
-    @RequestMapping(value = "/hello/{name}", method = {RequestMethod.GET, RequestMethod.POST})
-    public String returnString(@PathVariable String name) {
+    @RequestMapping(value = "/hello/{name}")
+    public String returnName(@PathVariable String name) {
         return name;
     }
 }

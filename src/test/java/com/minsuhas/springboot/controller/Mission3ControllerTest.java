@@ -12,14 +12,14 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
-@WebMvcTest(mission3Controller.class)
-public class mission3ControllerTest {
+@WebMvcTest(Mission3Controller.class)
+public class Mission3ControllerTest {
 
     @Autowired
     MockMvc mockMvc;
 
     @Test
-    public void returnString() throws Exception {
+    public void returnName() throws Exception {
         mockMvc.perform(get("/hello/minsu"))
                 .andExpect(status().isOk())
                 .andExpect(content().string("minsu"));
