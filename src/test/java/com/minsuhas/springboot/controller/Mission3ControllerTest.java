@@ -19,7 +19,7 @@ public class Mission3ControllerTest {
     MockMvc mockMvc;
 
     @Test
-    public void returnName() throws Exception {
+    public void testReturnName() throws Exception {
         mockMvc.perform(get("/hello/minsu"))
                 .andExpect(status().isOk())
                 .andExpect(content().string("minsu"));
