@@ -4,6 +4,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -20,8 +21,10 @@ public class Mission3ControllerTest {
 
     @Test
     public void testReturnName() throws Exception {
-        mockMvc.perform(get("/hello/minsu"))
-                .andExpect(status().isOk())
-                .andExpect(content().string("minsu"));
+        mockMvc.perform(get("/hello/minsu")
+                .contentType(MediaType.TEXT_PLAIN_VALUE)
+                .accept(MediaType.TEXT_PLAIN_VALUE))
+                    .andExpect(status().isOk())
+                    .andExpect(content().string("minsu"));
     }
 }

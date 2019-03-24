@@ -28,8 +28,8 @@ public class Mission5ControllerTest {
                 .contentType(MediaType.APPLICATION_JSON_UTF8)
                 .accept(MediaType.APPLICATION_JSON_UTF8)
                 .content(userJson))
-            .andExpect(status().isOk())
-            .andExpect(jsonPath("$.name", is(equalTo("minsu"))));
+                    .andExpect(status().isOk())
+                    .andExpect(jsonPath("$.name", is(equalTo("minsu"))));
 
     }
 }
